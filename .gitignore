@@ -45,5 +45,31 @@ Thumbs.db
 .env
 .env.local
 
-# Node modules (if any)
+# Node modules
 node_modules/
+
+# 排除不需要部署的文件
+backend.py
+es.py
+rerank_backend.py
+rerank_backend_deploy.py
+es-score.html
+es-rerank.html
+index.html
+DEPLOYMENT.md
+Procfile
+render.yaml
+requirements.txt
+
+# Vue项目文件
+src/
+public/
+babel.config.js
+jsconfig.json
+package.json
+package-lock.json
+vue.config.js
+.browserslistrc
+
+# Kiro specs
+.kiro/
