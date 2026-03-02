@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: rerank-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 4 -b 0.0.0.0:$PORT rerank_backend:app
+    envVars:
+      - key: DASHSCOPE_API_KEY
+        value: sk-d2a40e93f9a64d7e9fe40b9da3a0ef40
+      - key: PYTHON_VERSION
+        value: 3.11.0
